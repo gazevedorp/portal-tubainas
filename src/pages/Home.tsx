@@ -3,7 +3,6 @@ import CommercialBanner from '../components/CommercialBanner';
 import CategoryNews from '../components/CategoryNews';
 import VideoSection from '../components/VideoSection';
 import TastingSection from '../components/TastingSection';
-import CategorySelector from '../components/CategorySelector';
 
 export default function Home() {
   return (

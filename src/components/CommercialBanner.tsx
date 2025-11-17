@@ -20,17 +20,6 @@ export default function CommercialBanner({
     }
   };
 
-  const getImageHeight = () => {
-    switch (type) {
-      case 'hero':
-        return 'h-[200px] md:h-[300px]';
-      case 'sidebar':
-        return 'h-[250px]';
-      default:
-        return 'h-[150px] md:h-[200px]';
-    }
-  };
-
   return (
     <section className="py-4 md:py-8 bg-gradient-to-b from-white to-neutral-light">
       <div className="container">
