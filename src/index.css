@@ -1,0 +1,103 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Paleta "Tubaínas e Afins" */
+    --color-primary: #8FD14F;
+    --color-primary-light: #a8dc71;
+    --color-primary-dark: #76b83d;
+    --color-secondary: #F4A22C;
+    --color-secondary-light: #f7b555;
+    --color-secondary-dark: #d18a1e;
+    --color-accent: #E85B4A;
+    --color-accent-light: #ed7a6d;
+    --color-accent-dark: #d13d2a;
+    --color-complement: #7B5DE3;
+    --color-complement-light: #9479e8;
+    --color-complement-dark: #6345d0;
+    --color-neutral-light: #F6F6F6;
+    --color-neutral: #6B7280;
+    --color-neutral-dark: #1F1F1F;
+  }
+
+  body {
+    @apply min-w-[320px] min-h-screen bg-white text-neutral-dark;
+    font-family: 'Georgia', 'Times New Roman', serif;
+    line-height: 1.6;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  #root {
+    @apply min-h-screen flex flex-col;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold leading-tight;
+  }
+
+  a {
+    @apply text-inherit no-underline;
+  }
+
+  button {
+    @apply cursor-pointer border-none bg-transparent;
+    font-family: inherit;
+  }
+
+  img {
+    @apply max-w-full h-auto block;
+  }
+
+  input, textarea, select {
+    font-family: inherit;
+    font-size: inherit;
+  }
+
+  input:focus, textarea:focus, select:focus {
+    @apply outline-none;
+  }
+
+  html {
+    @apply scroll-smooth;
+  }
+}
+
+@layer components {
+  .container {
+    @apply max-w-[1400px] mx-auto px-6;
+  }
+
+  @media (max-width: 1440px) {
+    .container {
+      @apply max-w-[1200px];
+    }
+  }
+
+  @media (max-width: 1024px) {
+    .container {
+      @apply px-5;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .container {
+      @apply px-4;
+    }
+  }
+}
+
+@layer utilities {
+  /* Lazy loading de imagens */
+  img[loading="lazy"] {
+    @apply opacity-0 transition-opacity duration-300 ease-in-out;
+  }
+
+  img[loading="lazy"].loaded {
+    @apply opacity-100;
+  }
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Teste Imagem</title>
+    <style>
+        body {
+            padding: 20px;
+            font-family: Arial, sans-serif;
+        }
+        img {
+            max-width: 500px;
+            border: 2px solid #d4a574;
+        }
+        .info {
+            margin: 20px 0;
+            padding: 10px;
+            background: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Teste de Carregamento da Imagem</h1>
+
+    <div class="info">
+        <h2>Teste 1: Caminho /tubaina.png</h2>
+        <img src="/tubaina.png" alt="Tubaína" />
+    </div>
+
+    <div class="info">
+        <h2>Teste 2: Caminho ./tubaina.png</h2>
+        <img src="./tubaina.png" alt="Tubaína" />
+    </div>
+
+    <div class="info">
+        <h2>Teste 3: Caminho tubaina.png</h2>
+        <img src="tubaina.png" alt="Tubaína" />
+    </div>
+
+    <div class="info">
+        <p>Se você vê as imagens acima, significa que o servidor está funcionando corretamente!</p>
+        <p>Acesse: <a href="http://localhost:5177/test-image.html">http://localhost:5177/test-image.html</a></p>
+    </div>
+</body>
+</html>
